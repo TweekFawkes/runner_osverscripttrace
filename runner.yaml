@@ -1,0 +1,22 @@
+runner:
+  name: Scan OS Ver Script Traceroute
+  description: Scan OS Ver Script Traceroute (-A // -O -sV -sC --traceroute)
+  version: 0.0.1
+
+build:
+  commands: |
+    echo "START: Building the runner"
+    apt install -y nmap
+    echo "END: Building the runner"
+
+webform:
+  - name: ip_address
+    prompt: IP Address
+    type: text
+  - name: tcp_port
+    prompt: TCP Port
+    type: text
+
+launch:
+  type: binary
+  command: nmap -v -Pn -n -A -p ${tcp_port} --reason ${ip_address}
