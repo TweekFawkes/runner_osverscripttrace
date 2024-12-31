@@ -1,6 +1,6 @@
 runner:
   name: Scan OS Ver Script Traceroute
-  description: Scan OS Ver Script Traceroute (-A // -O -sV -sC --traceroute)
+  description: Scan OS Ver Script Traceroute (-A) or (-O -sV -sC --traceroute)
   version: 0.0.1
 
 build:
@@ -19,4 +19,4 @@ webform:
 
 launch:
   type: binary
-  command: nmap -v -Pn -n -A -p ${tcp_port} --reason ${ip_address}
+  command: nmap -v -Pn -n -A -p ${tcp_port} -oA outputs/ --reason ${ip_address}
