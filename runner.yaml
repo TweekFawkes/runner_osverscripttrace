@@ -1,6 +1,6 @@
 runner:
   name: Scan OS Ver Script Traceroute
-  description: Scan OS Ver Script Traceroute (-A) or (-O -sV -sC --traceroute)
+  description: Scan OS Version Scripts=Default Traceroute (-A) or (-O -sV -sC --traceroute) or (-O -sV --script=default --traceroute)
   version: 0.0.1
 
 build:
